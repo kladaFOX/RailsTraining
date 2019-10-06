@@ -4,6 +4,7 @@ class Student < ApplicationRecord
   has_many :common_students, class_name: "Student",
                           foreign_key: "headman_id"
   belongs_to :headman, class_name: "Student", optional: true
+  has_many :subjects, :through => :subject_marks#, dependent: :destroy
 
   validates :first_name, :last_name, presence: true
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/,

@@ -10,13 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_081050) do
+ActiveRecord::Schema.define(version: 2019_10_06_125836) do
 
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "number"
     t.integer "number_of_people"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lecturers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "subject_id"
+    t.string "last_name"
+    t.string "first_name"
+    t.string "patronymic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_lecturers_on_subject_id"
+  end
+
+  create_table "record_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "subject_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_record_books_on_student_id"
+    t.index ["subject_id"], name: "index_record_books_on_subject_id"
   end
 
   create_table "student_cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -39,6 +58,23 @@ ActiveRecord::Schema.define(version: 2019_10_02_081050) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "group_id"
     t.integer "headman_id"
+  end
+
+  create_table "subject_marks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "subject_id"
+    t.integer "mark"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_subject_marks_on_student_id"
+    t.index ["subject_id"], name: "index_subject_marks_on_subject_id"
+  end
+
+  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.integer "mark"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
