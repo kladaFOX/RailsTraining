@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_163053) do
+ActiveRecord::Schema.define(version: 2019_10_09_114238) do
 
   create_table "adresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "country"
@@ -41,15 +41,6 @@ ActiveRecord::Schema.define(version: 2019_10_08_163053) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["subject_id"], name: "index_lecturers_on_subject_id"
-  end
-
-  create_table "record_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "student_id"
-    t.bigint "subject_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["student_id"], name: "index_record_books_on_student_id"
-    t.index ["subject_id"], name: "index_record_books_on_subject_id"
   end
 
   create_table "student_cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
