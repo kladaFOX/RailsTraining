@@ -2951,3 +2951,16 @@ Migrating to AddForeignKeyToGroups (20191009115216)
   [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
   [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`session_id` = 1 LIMIT 11[0m
   [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (40.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (45.4ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-11 09:11:56.272315', '2019-10-11 09:11:56.272315')[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Create (0.3ms)[0m  [1m[32mINSERT INTO `sessions` (`created_at`, `updated_at`) VALUES ('2019-10-11 09:13:41.732450', '2019-10-11 09:13:41.732450')[0m
+  [1m[35m (126.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` WHERE `sessions`.`id` = 2 LIMIT 1[0m
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO `groups` (`number`, `created_at`, `updated_at`, `university_id`, `session_id`) VALUES (753505, '2019-10-11 09:14:07.281683', '2019-10-11 09:14:07.281683', 2, 2)[0m
+  [1m[36mSession Update All (111.0ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) + 1 WHERE `sessions`.`id` = 2[0m
+  [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
