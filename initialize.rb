@@ -10,8 +10,8 @@ subjects.each.with_index do |x, i|
   sub = Subject.create(name: x)
   Lecturer.create(last_name: lecturers[i], subject_id: sub.id)
 end
-
-g = Group.create(number: 753505, university_id: u.id)
+Session.create(date: '12.01.2019')
+g = Group.create(number: 753505, university_id: u.id, session_id: Session.last.id)
 
 headman = Student.create(last_name: 'Alhovskiy', first_name: 'Evgeniy', patronymic: 'Nikolaevich', group_id: g.id)
 headman.headman_id = headman.id
@@ -25,7 +25,7 @@ last_names.each.with_index do |x, i|
   Adress.create country: 'Belarus', region: regions[i], addressable_id: s.id, addressable_type: s.class
 end
 
-SubjectMark.create(student_id: Student.last.id, subject_id: Subject.last.id, mark: 10)
-
-# subjects.each do |x|
-# end
+Student.all.each.with_index do |x, i|
+  SubjectMark.create(student_id: x.id, subject_id: Subject.last.id, mark: (i + 1) % 10 )
+end
+SubjectMark.create(student_id: Student.last.id, subject_id: Subject.first.id, mark: 10)

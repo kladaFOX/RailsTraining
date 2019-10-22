@@ -2964,3 +2964,1020 @@ Migrating to AddForeignKeyToGroups (20191009115216)
   [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO `groups` (`number`, `created_at`, `updated_at`, `university_id`, `session_id`) VALUES (753505, '2019-10-11 09:14:07.281683', '2019-10-11 09:14:07.281683', 2, 2)[0m
   [1m[36mSession Update All (111.0ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) + 1 WHERE `sessions`.`id` = 2[0m
   [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (50.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubjectMark Load (0.5ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` LIMIT 11[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (1.2ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 08:49:36.306489', '2019-10-22 08:49:36.306489')[0m
+  [1m[35m (178.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 3 LIMIT 1[0m
+  [1m[36mAdress Create (0.7ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 08:49:36.609134', '2019-10-22 08:49:36.609134', 3, 'University')[0m
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 08:49:36.710925', '2019-10-22 08:49:36.710925')[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[36mLecturer Create (0.5ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Anisimov', '2019-10-22 08:49:36.866509', '2019-10-22 08:49:36.866509')[0m
+  [1m[35m (383.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (1.1ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 08:49:37.252441', '2019-10-22 08:49:37.252441')[0m
+  [1m[35m (726.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  [1m[36mLecturer Create (0.2ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Halkovskiy', '2019-10-22 08:49:37.985594', '2019-10-22 08:49:37.985594')[0m
+  [1m[35m (757.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 08:49:38.745175', '2019-10-22 08:49:38.745175')[0m
+  [1m[35m (359.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (3, 'Volorova', '2019-10-22 08:49:39.111650', '2019-10-22 08:49:39.111650')[0m
+  [1m[35m (280.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.4ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUniversity Load (0.9ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` LIMIT 11[0m
+  [1m[36mUniversity Load (0.4ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.6ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 3 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mAdress Destroy (1.0ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 3[0m
+  [1m[36mUniversity Destroy (0.5ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 3[0m
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (2.8ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 3[0m
+  [1m[36mLecturer Load (0.8ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 3 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.6ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 24[0m
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 3[0m
+  [1m[35m (66.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 2[0m
+  [1m[36mLecturer Load (0.3ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 2 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 23[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 2[0m
+  [1m[35m (61.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 1[0m
+  [1m[36mLecturer Load (0.4ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 1 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 22[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 1[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` LIMIT 11[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.9ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 2 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 2[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`group_id` = 2[0m
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM `groups` WHERE `groups`.`id` = 2[0m
+  [1m[36mSession Update All (0.7ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) - 1 WHERE `sessions`.`id` = 2[0m
+  [1m[36mUniversity Destroy (0.3ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 2[0m
+  [1m[35m (189.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUniversity Load (0.8ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` LIMIT 11[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.7ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 1 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`group_id` = 1[0m
+  [1m[36mGroup Destroy (1.3ms)[0m  [1m[31mDELETE FROM `groups` WHERE `groups`.`id` = 1[0m
+  [1m[36mSession Update All (1.1ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) - 1 WHERE `sessions`.`id` = 1[0m
+  [1m[36mUniversity Destroy (0.5ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 1[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUniversity Load (0.5ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (0.5ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 08:57:03.915433', '2019-10-22 08:57:03.915433')[0m
+  [1m[35m (125.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 4 LIMIT 1[0m
+  [1m[36mAdress Create (1.0ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 08:57:04.048482', '2019-10-22 08:57:04.048482', 4, 'University')[0m
+  [1m[35m (36.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.6ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 08:57:04.089723', '2019-10-22 08:57:04.089723')[0m
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (4, 'Anisimov', '2019-10-22 08:57:04.127216', '2019-10-22 08:57:04.127216')[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 08:57:04.168145', '2019-10-22 08:57:04.168145')[0m
+  [1m[35m (62.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  [1m[36mLecturer Create (0.3ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (5, 'Halkovskiy', '2019-10-22 08:57:04.235424', '2019-10-22 08:57:04.235424')[0m
+  [1m[35m (64.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.6ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 08:57:04.302302', '2019-10-22 08:57:04.302302')[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  [1m[36mLecturer Create (0.5ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (6, 'Volorova', '2019-10-22 08:57:04.339012', '2019-10-22 08:57:04.339012')[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` LIMIT 11[0m
+  [1m[36mUniversity Load (0.9ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.8ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 4 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.8ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 2[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 4[0m
+  [1m[36mUniversity Destroy (0.6ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 4[0m
+  [1m[35m (149.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 6[0m
+  [1m[36mLecturer Load (0.2ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 6 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 27[0m
+  [1m[36mSubject Destroy (0.1ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 6[0m
+  [1m[35m (74.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 5[0m
+  [1m[36mLecturer Load (0.3ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 5 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.3ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 26[0m
+  [1m[36mSubject Destroy (0.3ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 5[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 4[0m
+  [1m[36mLecturer Load (0.2ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 4 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 25[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 4[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` LIMIT 11[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (0.3ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 09:01:19.319600', '2019-10-22 09:01:19.319600')[0m
+  [1m[35m (118.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 5 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 09:01:19.444537', '2019-10-22 09:01:19.444537', 5, 'University')[0m
+  [1m[35m (36.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.6ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 09:01:19.485621', '2019-10-22 09:01:19.485621')[0m
+  [1m[35m (28.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (7, 'Anisimov', '2019-10-22 09:01:19.521799', '2019-10-22 09:01:19.521799')[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.7ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 09:01:19.563334', '2019-10-22 09:01:19.563334')[0m
+  [1m[35m (62.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 8 LIMIT 1[0m
+  [1m[36mLecturer Create (0.2ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (8, 'Halkovskiy', '2019-10-22 09:01:19.630826', '2019-10-22 09:01:19.630826')[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 09:01:19.697526', '2019-10-22 09:01:19.697526')[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 9 LIMIT 1[0m
+  [1m[36mLecturer Create (0.7ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (9, 'Volorova', '2019-10-22 09:01:19.735306', '2019-10-22 09:01:19.735306')[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Create (0.7ms)[0m  [1m[32mINSERT INTO `sessions` (`date`, `created_at`, `updated_at`) VALUES ('2019-01-12', '2019-10-22 09:01:19.785244', '2019-10-22 09:01:19.785244')[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.6ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.7ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 5 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.6ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 3[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 5[0m
+  [1m[36mUniversity Destroy (1.3ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 5[0m
+  [1m[35m (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 9[0m
+  [1m[36mLecturer Load (0.2ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 9 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 30[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 9[0m
+  [1m[35m (63.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 8[0m
+  [1m[36mLecturer Load (0.3ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 8 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.3ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 29[0m
+  [1m[36mSubject Destroy (0.3ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 8[0m
+  [1m[35m (63.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 7[0m
+  [1m[36mLecturer Load (0.2ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 7 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.2ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 28[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 7[0m
+  [1m[35m (64.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (0.6ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 09:01:53.772298', '2019-10-22 09:01:53.772298')[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.6ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 6 LIMIT 1[0m
+  [1m[36mAdress Create (0.5ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 09:01:53.820364', '2019-10-22 09:01:53.820364', 6, 'University')[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 09:01:53.851045', '2019-10-22 09:01:53.851045')[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 10 LIMIT 1[0m
+  [1m[36mLecturer Create (0.5ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (10, 'Anisimov', '2019-10-22 09:01:53.887713', '2019-10-22 09:01:53.887713')[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 09:01:53.918379', '2019-10-22 09:01:53.918379')[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 11 LIMIT 1[0m
+  [1m[36mLecturer Create (0.5ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (11, 'Halkovskiy', '2019-10-22 09:01:53.954695', '2019-10-22 09:01:53.954695')[0m
+  [1m[35m (60.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 09:01:54.018245', '2019-10-22 09:01:54.018245')[0m
+  [1m[35m (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mLecturer Create (0.5ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (12, 'Volorova', '2019-10-22 09:01:54.094705', '2019-10-22 09:01:54.094705')[0m
+  [1m[35m (65.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Create (0.5ms)[0m  [1m[32mINSERT INTO `sessions` (`date`, `created_at`, `updated_at`) VALUES ('2019-01-12', '2019-10-22 09:01:54.163882', '2019-10-22 09:01:54.163882')[0m
+  [1m[35m (62.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.2ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 6 LIMIT 1[0m
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` WHERE `sessions`.`id` = 4 LIMIT 1[0m
+  [1m[36mGroup Create (0.2ms)[0m  [1m[32mINSERT INTO `groups` (`number`, `created_at`, `updated_at`, `university_id`, `session_id`) VALUES (753505, '2019-10-22 09:01:54.233272', '2019-10-22 09:01:54.233272', 6, 4)[0m
+  [1m[36mSession Update All (21.7ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) + 1 WHERE `sessions`.`id` = 4[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `patronymic`, `created_at`, `updated_at`, `group_id`) VALUES ('Alhovskiy', 'Evgeniy', 'Nikolaevich', '2019-10-22 09:01:54.310011', '2019-10-22 09:01:54.310011', 3)[0m
+  [1m[36mGroup Update All (0.3ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.7ms)[0m  [1m[33mUPDATE `students` SET `students`.`updated_at` = '2019-10-22 09:01:54.343204', `students`.`headman_id` = 1 WHERE `students`.`id` = 1[0m
+  [1m[35m (79.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 1 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.4ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (1, 'FKSIS', 'daytime', '2019-10-22 09:01:54.489148', '2019-10-22 09:01:54.489148', 75350001)[0m
+  [1m[35m (60.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 1 LIMIT 1[0m
+  [1m[36mAdress Create (0.5ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 09:01:54.555980', '2019-10-22 09:01:54.555980', 1, 'Student')[0m
+  [1m[35m (80.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Klapatok', 'Ilya', '2019-10-22 09:01:54.644022', '2019-10-22 09:01:54.644022', 3, 1)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (68.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 2 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (2, 'FKSIS', 'daytime', '2019-10-22 09:01:54.722700', '2019-10-22 09:01:54.722700', 75350002)[0m
+  [1m[35m (70.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 2 LIMIT 1[0m
+  [1m[36mAdress Create (0.7ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 09:01:54.800354', '2019-10-22 09:01:54.800354', 2, 'Student')[0m
+  [1m[35m (59.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Stashkevich', 'Andrey', '2019-10-22 09:01:54.867785', '2019-10-22 09:01:54.867785', 3, 1)[0m
+  [1m[36mGroup Update All (0.8ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (3, 'FKSIS', 'daytime', '2019-10-22 09:01:54.911571', '2019-10-22 09:01:54.911571', 75350003)[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 3 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', '2019-10-22 09:01:54.945730', '2019-10-22 09:01:54.945730', 3, 'Student')[0m
+  [1m[35m (88.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Osipik', 'Ivan', '2019-10-22 09:01:55.042281', '2019-10-22 09:01:55.042281', 3, 1)[0m
+  [1m[36mGroup Update All (0.8ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (441.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (4, 'FKSIS', 'daytime', '2019-10-22 09:01:55.493602', '2019-10-22 09:01:55.493602', 75350004)[0m
+  [1m[35m (82.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 4 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Mogilev', '2019-10-22 09:01:55.583894', '2019-10-22 09:01:55.583894', 4, 'Student')[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Kamenko', 'Pavel', '2019-10-22 09:01:55.639887', '2019-10-22 09:01:55.639887', 3, 1)[0m
+  [1m[36mGroup Update All (1.1ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (124.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.3ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (5, 'FKSIS', 'daytime', '2019-10-22 09:01:55.772271', '2019-10-22 09:01:55.772271', 75350005)[0m
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  [1m[36mAdress Create (0.4ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Brest', '2019-10-22 09:01:55.818796', '2019-10-22 09:01:55.818796', 5, 'Student')[0m
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Chibisov', 'Ivan', '2019-10-22 09:01:55.864282', '2019-10-22 09:01:55.864282', 3, 1)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 6 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (6, 'FKSIS', 'daytime', '2019-10-22 09:01:55.922111', '2019-10-22 09:01:55.922111', 75350006)[0m
+  [1m[35m (66.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 6 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Hrodno', '2019-10-22 09:01:55.995241', '2019-10-22 09:01:55.995241', 6, 'Student')[0m
+  [1m[35m (48.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Lagun', 'Aleksey', '2019-10-22 09:01:56.050805', '2019-10-22 09:01:56.050805', 3, 1)[0m
+  [1m[36mGroup Update All (0.8ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 3[0m
+  [1m[35m (81.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 7 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (7, 'FKSIS', 'daytime', '2019-10-22 09:01:56.140874', '2019-10-22 09:01:56.140874', 75350007)[0m
+  [1m[35m (83.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 7 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Vitebsk', '2019-10-22 09:01:56.231609', '2019-10-22 09:01:56.231609', 7, 'Student')[0m
+  [1m[35m (49.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 1 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (1, 12, 0, '2019-10-22 09:01:56.312613', '2019-10-22 09:01:56.312613')[0m
+  [1m[35m (47.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 2 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (2, 12, 1, '2019-10-22 09:01:56.369379', '2019-10-22 09:01:56.369379')[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 3 LIMIT 1[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (3, 12, 2, '2019-10-22 09:01:56.478047', '2019-10-22 09:01:56.478047')[0m
+  [1m[35m (50.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 4 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (4, 12, 3, '2019-10-22 09:01:56.538463', '2019-10-22 09:01:56.538463')[0m
+  [1m[35m (108.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (5, 12, 4, '2019-10-22 09:01:56.656576', '2019-10-22 09:01:56.656576')[0m
+  [1m[35m (46.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 6 LIMIT 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (6, 12, 5, '2019-10-22 09:01:56.713854', '2019-10-22 09:01:56.713854')[0m
+  [1m[35m (45.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 7 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (7, 12, 6, '2019-10-22 09:01:56.769499', '2019-10-22 09:01:56.769499')[0m
+  [1m[35m (46.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` INNER JOIN `subject_marks` ON `subjects`.`id` = `subject_marks`.`subject_id` WHERE `subject_marks`.`student_id` = 7 LIMIT 11[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`student_id` = 7 LIMIT 11[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` LIMIT 11[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.6ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 6 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.6ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 4[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 6[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`group_id` = 3[0m
+  [1m[36mStudentCard Load (0.7ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 1 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.6ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 1[0m
+  [1m[36mAdress Load (0.7ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 1 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.5ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 5[0m
+  [1m[36mStudent Destroy (0.6ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 1[0m
+  [1m[36mStudentCard Load (0.6ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 2 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.7ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 2[0m
+  [1m[36mAdress Load (0.8ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 2 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.7ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 6[0m
+  [1m[36mStudent Destroy (0.5ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 2[0m
+  [1m[36mStudentCard Load (0.9ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 3 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.5ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 3[0m
+  [1m[36mAdress Load (0.7ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 3 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.5ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 7[0m
+  [1m[36mStudent Destroy (0.5ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 3[0m
+  [1m[36mStudentCard Load (0.7ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 4 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.5ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 4[0m
+  [1m[36mAdress Load (0.6ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 4 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.5ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 8[0m
+  [1m[36mStudent Destroy (0.5ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 4[0m
+  [1m[36mStudentCard Load (0.9ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 5 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.8ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 5[0m
+  [1m[36mAdress Load (0.8ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 5 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.9ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 9[0m
+  [1m[36mStudent Destroy (0.8ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 5[0m
+  [1m[36mStudentCard Load (0.7ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 6 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.5ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 6[0m
+  [1m[36mAdress Load (0.5ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 6 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.6ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 10[0m
+  [1m[36mStudent Destroy (0.8ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 6[0m
+  [1m[36mStudentCard Load (0.7ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 7 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.6ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 7[0m
+  [1m[36mAdress Load (0.8ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 7 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.6ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 11[0m
+  [1m[36mStudent Destroy (0.7ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 7[0m
+  [1m[36mGroup Destroy (0.5ms)[0m  [1m[31mDELETE FROM `groups` WHERE `groups`.`id` = 3[0m
+  [1m[36mSession Update All (0.8ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) - 1 WHERE `sessions`.`id` = 4[0m
+  [1m[36mUniversity Destroy (0.7ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 6[0m
+  [1m[35m (96.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUniversity Load (2.0ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Destroy (0.6ms)[0m  [1m[31mDELETE FROM `sessions` WHERE `sessions`.`id` = 4[0m
+  [1m[35m (131.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Destroy (0.6ms)[0m  [1m[31mDELETE FROM `sessions` WHERE `sessions`.`id` = 3[0m
+  [1m[35m (67.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.8ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 12[0m
+  [1m[36mSubjectMark Destroy (0.7ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 1[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 2[0m
+  [1m[36mSubjectMark Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 3[0m
+  [1m[36mSubjectMark Destroy (0.8ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 4[0m
+  [1m[36mSubjectMark Destroy (0.8ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 5[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 6[0m
+  [1m[36mSubjectMark Destroy (0.4ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 7[0m
+  [1m[36mLecturer Load (0.7ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 12 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.8ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 33[0m
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 12[0m
+  [1m[35m (187.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 11[0m
+  [1m[36mLecturer Load (0.7ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 11 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.6ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 32[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 11[0m
+  [1m[35m (55.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.9ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 10[0m
+  [1m[36mLecturer Load (0.7ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 10 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.6ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 31[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 10[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (0.6ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 09:14:14.612633', '2019-10-22 09:14:14.612633')[0m
+  [1m[35m (127.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.7ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 7 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 09:14:14.752603', '2019-10-22 09:14:14.752603', 7, 'University')[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 09:14:14.792186', '2019-10-22 09:14:14.792186')[0m
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 13 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (13, 'Anisimov', '2019-10-22 09:14:14.828612', '2019-10-22 09:14:14.828612')[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 09:14:14.870165', '2019-10-22 09:14:14.870165')[0m
+  [1m[35m (370.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 14 LIMIT 1[0m
+  [1m[36mLecturer Create (0.3ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (14, 'Halkovskiy', '2019-10-22 09:14:15.245588', '2019-10-22 09:14:15.245588')[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 09:14:15.312091', '2019-10-22 09:14:15.312091')[0m
+  [1m[35m (64.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (15, 'Volorova', '2019-10-22 09:14:15.382516', '2019-10-22 09:14:15.382516')[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Create (0.5ms)[0m  [1m[32mINSERT INTO `sessions` (`date`, `created_at`, `updated_at`) VALUES ('2019-01-12', '2019-10-22 09:14:15.413423', '2019-10-22 09:14:15.413423')[0m
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.6ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 7 LIMIT 1[0m
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` WHERE `sessions`.`id` = 5 LIMIT 1[0m
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO `groups` (`number`, `created_at`, `updated_at`, `university_id`, `session_id`) VALUES (753505, '2019-10-22 09:14:15.464146', '2019-10-22 09:14:15.464146', 7, 5)[0m
+  [1m[36mSession Update All (0.5ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) + 1 WHERE `sessions`.`id` = 5[0m
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `patronymic`, `created_at`, `updated_at`, `group_id`) VALUES ('Alhovskiy', 'Evgeniy', 'Nikolaevich', '2019-10-22 09:14:15.506562', '2019-10-22 09:14:15.506562', 4)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE `students` SET `students`.`updated_at` = '2019-10-22 09:14:15.546564', `students`.`headman_id` = 8 WHERE `students`.`id` = 8[0m
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 8 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.3ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (8, 'FKSIS', 'daytime', '2019-10-22 09:14:15.581771', '2019-10-22 09:14:15.581771', 75350008)[0m
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 8 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 09:14:15.617555', '2019-10-22 09:14:15.617555', 8, 'Student')[0m
+  [1m[35m (71.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Klapatok', 'Ilya', '2019-10-22 09:14:15.696214', '2019-10-22 09:14:15.696214', 4, 8)[0m
+  [1m[36mGroup Update All (2.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (56.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 9 LIMIT 1[0m
+  [1m[36mStudentCard Create (3.0ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (9, 'FKSIS', 'daytime', '2019-10-22 09:14:15.763261', '2019-10-22 09:14:15.763261', 75350009)[0m
+  [1m[35m (68.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 9 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 09:14:15.841560', '2019-10-22 09:14:15.841560', 9, 'Student')[0m
+  [1m[35m (59.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Stashkevich', 'Andrey', '2019-10-22 09:14:15.908739', '2019-10-22 09:14:15.908739', 4, 8)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 10 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (10, 'FKSIS', 'daytime', '2019-10-22 09:14:15.953083', '2019-10-22 09:14:15.953083', 75350010)[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 10 LIMIT 1[0m
+  [1m[36mAdress Create (0.7ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', '2019-10-22 09:14:15.997426', '2019-10-22 09:14:15.997426', 10, 'Student')[0m
+  [1m[35m (60.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Osipik', 'Ivan', '2019-10-22 09:14:16.065076', '2019-10-22 09:14:16.065076', 4, 8)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (58.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 11 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.8ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (11, 'FKSIS', 'daytime', '2019-10-22 09:14:16.132895', '2019-10-22 09:14:16.132895', 75350011)[0m
+  [1m[35m (36.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 11 LIMIT 1[0m
+  [1m[36mAdress Create (0.5ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Mogilev', '2019-10-22 09:14:16.176708', '2019-10-22 09:14:16.176708', 11, 'Student')[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Kamenko', 'Pavel', '2019-10-22 09:14:16.221656', '2019-10-22 09:14:16.221656', 4, 8)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 12 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (12, 'FKSIS', 'daytime', '2019-10-22 09:14:16.266183', '2019-10-22 09:14:16.266183', 75350012)[0m
+  [1m[35m (37.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 12 LIMIT 1[0m
+  [1m[36mAdress Create (0.3ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Brest', '2019-10-22 09:14:16.309718', '2019-10-22 09:14:16.309718', 12, 'Student')[0m
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Chibisov', 'Ivan', '2019-10-22 09:14:16.341808', '2019-10-22 09:14:16.341808', 4, 8)[0m
+  [1m[36mGroup Update All (0.3ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 13 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.4ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (13, 'FKSIS', 'daytime', '2019-10-22 09:14:16.375222', '2019-10-22 09:14:16.375222', 75350013)[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 13 LIMIT 1[0m
+  [1m[36mAdress Create (0.4ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Hrodno', '2019-10-22 09:14:16.409453', '2019-10-22 09:14:16.409453', 13, 'Student')[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 4 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Lagun', 'Aleksey', '2019-10-22 09:14:16.449183', '2019-10-22 09:14:16.449183', 4, 8)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 4[0m
+  [1m[35m (43.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.7ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (14, 'FKSIS', 'daytime', '2019-10-22 09:14:16.502280', '2019-10-22 09:14:16.502280', 75350014)[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[36mAdress Create (0.7ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Vitebsk', '2019-10-22 09:14:16.546951', '2019-10-22 09:14:16.546951', 14, 'Student')[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 8 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.8ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (8, 15, 0, '2019-10-22 09:14:16.597857', '2019-10-22 09:14:16.597857')[0m
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 9 LIMIT 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.7ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (9, 15, 1, '2019-10-22 09:14:16.640105', '2019-10-22 09:14:16.640105')[0m
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 10 LIMIT 1[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (10, 15, 2, '2019-10-22 09:14:16.685475', '2019-10-22 09:14:16.685475')[0m
+  [1m[35m (33.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 11 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.8ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (11, 15, 3, '2019-10-22 09:14:16.729673', '2019-10-22 09:14:16.729673')[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 12 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (12, 15, 4, '2019-10-22 09:14:16.774015', '2019-10-22 09:14:16.774015')[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 13 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (13, 15, 5, '2019-10-22 09:14:16.818295', '2019-10-22 09:14:16.818295')[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (14, 15, 6, '2019-10-22 09:14:16.862382', '2019-10-22 09:14:16.862382')[0m
+  [1m[35m (35.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students` LIMIT 11[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`student_id` = 14 LIMIT 11[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 14 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.7ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (14, 14, 10, '2019-10-22 09:45:41.728794', '2019-10-22 09:45:41.728794')[0m
+  [1m[35m (35.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`student_id` = 14 LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`mark` FROM `subject_marks` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`id` FROM `subject_marks` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.5ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`id` FROM `subject_marks` GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`id` FROM `subject_marks` GROUP BY `subject_marks`.`mark`, `subject_marks`.`id` LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 13 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (14, 13, 10, '2019-10-22 09:48:26.998395', '2019-10-22 09:48:26.998395')[0m
+  [1m[35m (908.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`id` FROM `subject_marks` GROUP BY `subject_marks`.`mark`, `subject_marks`.`id` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.9ms)[0m  [1m[34mSELECT `subject_marks`.`mark` FROM `subject_marks` GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.9ms)[0m  [1m[34mSELECT `subject_marks`.`mark` FROM `subject_marks` WHERE (mark < 10) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.9ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`student_id` FROM `subject_marks` WHERE (mark < 10) GROUP BY `subject_marks`.`mark`, `subject_marks`.`student_id` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.4ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`student_id` FROM `subject_marks` WHERE (mark < 10) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(mark, student_id) AS count_mark_student_id, `subject_marks`.`mark` AS subject_marks_mark, `subject_marks`.`student_id` AS subject_marks_student_id FROM `subject_marks` WHERE (mark < 10) GROUP BY `subject_marks`.`mark`, `subject_marks`.`student_id`[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark < 10) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` GROUP BY `subject_marks`.`subject_id` LIMIT 11[0m
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` GROUP BY `subjects`.`name` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` GROUP BY `subject_marks`.`subject_id` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` GROUP BY `subject_marks`.`subject_id` LIMIT 11[0m
+  [1m[36mSubjectMark Load (1.4ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` GROUP BY `subject_marks`.`subject_id` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`subject_id` FROM `subject_marks` GROUP BY `subject_marks`.`subject_id` LIMIT 11[0m
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`subject_id`) AS count_subject_id, `subject_marks`.`subject_id` AS subject_marks_subject_id FROM `subject_marks` GROUP BY `subject_marks`.`subject_id`[0m
+  [1m[36mSubjectMark Load (0.8ms)[0m  [1m[34mSELECT `subject_marks`.`mark` FROM `subject_marks` WHERE (mark > 5) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` WHERE (mark > 5) GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.8ms)[0m  [1m[34mSELECT `subject_marks`.`mark` FROM `subject_marks` WHERE (mark > 5) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` ORDER BY `subject_marks`.`id` DESC LIMIT 1[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` ORDER BY `subject_marks`.`id` DESC LIMIT 1[0m
+  [1m[36mSubjectMark Load (1.4ms)[0m  [1m[34mSELECT `subject_marks`.`mark`, `subject_marks`.`student_id` FROM `subject_marks` WHERE (mark > 5) GROUP BY `subject_marks`.`mark` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`student_id` FROM `subject_marks` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.`student_id` FROM `subject_marks` GROUP BY `subject_marks`.`student_id` LIMIT 11[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`student_id`) AS count_student_id, `subject_marks`.`student_id` AS subject_marks_student_id FROM `subject_marks` GROUP BY `subject_marks`.`student_id`[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` ORDER BY `subject_marks`.`id` DESC LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(student_id, mark) AS count_student_id_mark, `subject_marks`.`student_id` AS subject_marks_student_id, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`student_id`, `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.8ms)[0m  [1m[34mSELECT `subject_marks`.`student_id`, `subject_marks`.`mark` FROM `subject_marks` GROUP BY `subject_marks`.`student_id`, `subject_marks`.`mark` LIMIT 11[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mUniversity Load (0.3ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` ORDER BY `universities`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdress Load (0.2ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 7 AND `adresses`.`addressable_type` = 'University' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.2ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 12[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`university_id` = 7[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`group_id` = 4[0m
+  [1m[36mStudentCard Load (0.3ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 8 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 8[0m
+  [1m[36mAdress Load (0.2ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 8 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.2ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 13[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 8[0m
+  [1m[36mStudentCard Load (0.2ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 9 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 9[0m
+  [1m[36mAdress Load (0.1ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 9 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 14[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 9[0m
+  [1m[36mStudentCard Load (0.1ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 10 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 10[0m
+  [1m[36mAdress Load (0.2ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 10 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 15[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 10[0m
+  [1m[36mStudentCard Load (0.1ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 11 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 11[0m
+  [1m[36mAdress Load (0.4ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 11 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 16[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 11[0m
+  [1m[36mStudentCard Load (0.1ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 12 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 12[0m
+  [1m[36mAdress Load (0.1ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 12 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 17[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 12[0m
+  [1m[36mStudentCard Load (0.1ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 13 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 13[0m
+  [1m[36mAdress Load (0.1ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 13 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 18[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 13[0m
+  [1m[36mStudentCard Load (0.1ms)[0m  [1m[34mSELECT `student_cards`.* FROM `student_cards` WHERE `student_cards`.`student_id` = 14 LIMIT 1[0m
+  [1m[36mStudentCard Destroy (0.1ms)[0m  [1m[31mDELETE FROM `student_cards` WHERE `student_cards`.`id` = 14[0m
+  [1m[36mAdress Load (0.1ms)[0m  [1m[34mSELECT `adresses`.* FROM `adresses` WHERE `adresses`.`addressable_id` = 14 AND `adresses`.`addressable_type` = 'Student' LIMIT 1[0m
+  [1m[36mAdress Destroy (0.1ms)[0m  [1m[31mDELETE FROM `adresses` WHERE `adresses`.`id` = 19[0m
+  [1m[36mStudent Destroy (0.1ms)[0m  [1m[31mDELETE FROM `students` WHERE `students`.`id` = 14[0m
+  [1m[36mGroup Destroy (0.1ms)[0m  [1m[31mDELETE FROM `groups` WHERE `groups`.`id` = 4[0m
+  [1m[36mSession Update All (0.2ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) - 1 WHERE `sessions`.`id` = 5[0m
+  [1m[36mUniversity Destroy (0.1ms)[0m  [1m[31mDELETE FROM `universities` WHERE `universities`.`id` = 7[0m
+  [1m[35m (186.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSession Load (0.6ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Destroy (0.6ms)[0m  [1m[31mDELETE FROM `sessions` WHERE `sessions`.`id` = 5[0m
+  [1m[35m (62.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects`[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 15[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 8[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 9[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 10[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 11[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 12[0m
+  [1m[36mSubjectMark Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 13[0m
+  [1m[36mSubjectMark Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 14[0m
+  [1m[36mLecturer Load (0.7ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 15 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.6ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 36[0m
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 15[0m
+  [1m[35m (56.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 14[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 15[0m
+  [1m[36mLecturer Load (0.7ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 14 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.5ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 35[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 14[0m
+  [1m[35m (55.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE `subject_marks`.`subject_id` = 13[0m
+  [1m[36mSubjectMark Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subject_marks` WHERE `subject_marks`.`id` = 16[0m
+  [1m[36mLecturer Load (0.6ms)[0m  [1m[34mSELECT `lecturers`.* FROM `lecturers` WHERE `lecturers`.`subject_id` = 13 LIMIT 1[0m
+  [1m[36mLecturer Destroy (0.6ms)[0m  [1m[31mDELETE FROM `lecturers` WHERE `lecturers`.`id` = 34[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 13[0m
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` LIMIT 11[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Create (0.3ms)[0m  [1m[32mINSERT INTO `universities` (`name`, `created_at`, `updated_at`) VALUES ('BSUIR', '2019-10-22 10:24:19.746042', '2019-10-22 10:24:19.746042')[0m
+  [1m[35m (128.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.6ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 8 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `locality`, `street`, `house`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', 'Minsk', 'Hikalo', '9', '2019-10-22 10:24:19.880532', '2019-10-22 10:24:19.880532', 8, 'University')[0m
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('MCHA', '2019-10-22 10:24:19.921616', '2019-10-22 10:24:19.921616')[0m
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 16 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (16, 'Anisimov', '2019-10-22 10:24:19.958135', '2019-10-22 10:24:19.958135')[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('PPO', '2019-10-22 10:24:19.999770', '2019-10-22 10:24:19.999770')[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 17 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (17, 'Halkovskiy', '2019-10-22 10:24:20.036328', '2019-10-22 10:24:20.036328')[0m
+  [1m[35m (38.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `created_at`, `updated_at`) VALUES ('AVS', '2019-10-22 10:24:20.078077', '2019-10-22 10:24:20.078077')[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mLecturer Create (0.6ms)[0m  [1m[32mINSERT INTO `lecturers` (`subject_id`, `last_name`, `created_at`, `updated_at`) VALUES (18, 'Volorova', '2019-10-22 10:24:20.114426', '2019-10-22 10:24:20.114426')[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSession Create (0.6ms)[0m  [1m[32mINSERT INTO `sessions` (`date`, `created_at`, `updated_at`) VALUES ('2019-01-12', '2019-10-22 10:24:20.145106', '2019-10-22 10:24:20.145106')[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` ORDER BY `sessions`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUniversity Load (0.6ms)[0m  [1m[34mSELECT `universities`.* FROM `universities` WHERE `universities`.`id` = 8 LIMIT 1[0m
+  [1m[36mSession Load (0.6ms)[0m  [1m[34mSELECT `sessions`.* FROM `sessions` WHERE `sessions`.`id` = 6 LIMIT 1[0m
+  [1m[36mGroup Create (0.6ms)[0m  [1m[32mINSERT INTO `groups` (`number`, `created_at`, `updated_at`, `university_id`, `session_id`) VALUES (753505, '2019-10-22 10:24:20.186012', '2019-10-22 10:24:20.186012', 8, 6)[0m
+  [1m[36mSession Update All (0.7ms)[0m  [1m[33mUPDATE `sessions` SET `sessions`.`number_of_groups` = COALESCE(`sessions`.`number_of_groups`, 0) + 1 WHERE `sessions`.`id` = 6[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `patronymic`, `created_at`, `updated_at`, `group_id`) VALUES ('Alhovskiy', 'Evgeniy', 'Nikolaevich', '2019-10-22 10:24:20.227112', '2019-10-22 10:24:20.227112', 5)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.7ms)[0m  [1m[33mUPDATE `students` SET `students`.`updated_at` = '2019-10-22 10:24:20.268576', `students`.`headman_id` = 15 WHERE `students`.`id` = 15[0m
+  [1m[35m (28.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 15 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (15, 'FKSIS', 'daytime', '2019-10-22 10:24:20.305038', '2019-10-22 10:24:20.305038', 75350015)[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 15 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 10:24:20.349410', '2019-10-22 10:24:20.349410', 15, 'Student')[0m
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Klapatok', 'Ilya', '2019-10-22 10:24:20.394278', '2019-10-22 10:24:20.394278', 5, 15)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (58.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 16 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.2ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (16, 'FKSIS', 'daytime', '2019-10-22 10:24:20.458198', '2019-10-22 10:24:20.458198', 75350016)[0m
+  [1m[35m (65.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 16 LIMIT 1[0m
+  [1m[36mAdress Create (0.3ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Homel', '2019-10-22 10:24:20.526158', '2019-10-22 10:24:20.526158', 16, 'Student')[0m
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Stashkevich', 'Andrey', '2019-10-22 10:24:20.562242', '2019-10-22 10:24:20.562242', 5, 15)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 17 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (17, 'FKSIS', 'daytime', '2019-10-22 10:24:20.606505', '2019-10-22 10:24:20.606505', 75350017)[0m
+  [1m[35m (38.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 17 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Minsk', '2019-10-22 10:24:20.651305', '2019-10-22 10:24:20.651305', 17, 'Student')[0m
+  [1m[35m (60.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Osipik', 'Ivan', '2019-10-22 10:24:20.718895', '2019-10-22 10:24:20.718895', 5, 15)[0m
+  [1m[36mGroup Update All (0.5ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 18 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (18, 'FKSIS', 'daytime', '2019-10-22 10:24:20.785894', '2019-10-22 10:24:20.785894', 75350018)[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 18 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Mogilev', '2019-10-22 10:24:20.830259', '2019-10-22 10:24:20.830259', 18, 'Student')[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Kamenko', 'Pavel', '2019-10-22 10:24:20.875157', '2019-10-22 10:24:20.875157', 5, 15)[0m
+  [1m[36mGroup Update All (0.7ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (35.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 19 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (19, 'FKSIS', 'daytime', '2019-10-22 10:24:20.919606', '2019-10-22 10:24:20.919606', 75350019)[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 19 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Brest', '2019-10-22 10:24:20.956302', '2019-10-22 10:24:20.956302', 19, 'Student')[0m
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Chibisov', 'Ivan', '2019-10-22 10:24:21.010986', '2019-10-22 10:24:21.010986', 5, 15)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 20 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.6ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (20, 'FKSIS', 'daytime', '2019-10-22 10:24:21.055235', '2019-10-22 10:24:21.055235', 75350020)[0m
+  [1m[35m (37.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 20 LIMIT 1[0m
+  [1m[36mAdress Create (0.5ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Hrodno', '2019-10-22 10:24:21.099615', '2019-10-22 10:24:21.099615', 20, 'Student')[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` WHERE `groups`.`id` = 5 LIMIT 1[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`last_name`, `first_name`, `created_at`, `updated_at`, `group_id`, `headman_id`) VALUES ('Lagun', 'Aleksey', '2019-10-22 10:24:21.144645', '2019-10-22 10:24:21.144645', 5, 15)[0m
+  [1m[36mGroup Update All (0.6ms)[0m  [1m[33mUPDATE `groups` SET `groups`.`number_of_people` = COALESCE(`groups`.`number_of_people`, 0) + 1 WHERE `groups`.`id` = 5[0m
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 21 LIMIT 1[0m
+  [1m[36mStudentCard Create (0.5ms)[0m  [1m[32mINSERT INTO `student_cards` (`student_id`, `faculty`, `form_of_training`, `created_at`, `updated_at`, `card_number`) VALUES (21, 'FKSIS', 'daytime', '2019-10-22 10:24:21.188855', '2019-10-22 10:24:21.188855', 75350021)[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 21 LIMIT 1[0m
+  [1m[36mAdress Create (0.6ms)[0m  [1m[32mINSERT INTO `adresses` (`country`, `region`, `created_at`, `updated_at`, `addressable_id`, `addressable_type`) VALUES ('Belarus', 'Vitebsk', '2019-10-22 10:24:21.233646', '2019-10-22 10:24:21.233646', 21, 'Student')[0m
+  [1m[35m (37.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 15 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (15, 18, 1, '2019-10-22 10:24:21.284001', '2019-10-22 10:24:21.284001')[0m
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 16 LIMIT 1[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (16, 18, 2, '2019-10-22 10:24:21.325385', '2019-10-22 10:24:21.325385')[0m
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 17 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (17, 18, 3, '2019-10-22 10:24:21.370922', '2019-10-22 10:24:21.370922')[0m
+  [1m[35m (34.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (18, 18, 4, '2019-10-22 10:24:21.415271', '2019-10-22 10:24:21.415271')[0m
+  [1m[35m (34.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 19 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.5ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (19, 18, 5, '2019-10-22 10:24:21.459862', '2019-10-22 10:24:21.459862')[0m
+  [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 20 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (20, 18, 6, '2019-10-22 10:24:21.504681', '2019-10-22 10:24:21.504681')[0m
+  [1m[35m (34.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 21 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 18 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (21, 18, 7, '2019-10-22 10:24:21.549307', '2019-10-22 10:24:21.549307')[0m
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` DESC LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY `subjects`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 21 LIMIT 1[0m
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 16 LIMIT 1[0m
+  [1m[36mSubjectMark Create (0.6ms)[0m  [1m[32mINSERT INTO `subject_marks` (`student_id`, `subject_id`, `mark`, `created_at`, `updated_at`) VALUES (21, 16, 10, '2019-10-22 10:24:21.595724', '2019-10-22 10:24:21.595724')[0m
+  [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2) LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2) LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2) LIMIT 11[0m
+  [1m[36mSubjectMark Load (0.7ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2)[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 15 LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 16 LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (marlk <= 2)[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.6ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2)[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 15 LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 16 LIMIT 1[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.5ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2)[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` IN (15, 16)[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.2ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2)[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` IN (15, 16)[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`first_name` = 'Ilya' LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`subject_marks`.`mark`) AS count_mark, `subject_marks`.`mark` AS subject_marks_mark FROM `subject_marks` GROUP BY `subject_marks`.`mark`[0m
+  [1m[36mSubjectMark Load (0.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark <= 2)[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` IN (15, 16)[0m
+  [1m[36mSubjectMark Load (0.3ms)[0m  [1m[34mSELECT `subject_marks`.* FROM `subject_marks` WHERE (mark >= 3)[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` IN (17, 18, 19, 20, 21)[0m
