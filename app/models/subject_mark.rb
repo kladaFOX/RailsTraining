@@ -16,7 +16,7 @@ class SubjectMark < ApplicationRecord
   def self.last_names_average
     output = {}
     SubjectMark.average.each do |key, value|
-      last_name = Student.find(key).last_name
+      last_name = Student.find(key).try(:last_name)
       output[last_name] = value.to_f
     end
     output
