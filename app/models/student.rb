@@ -7,6 +7,7 @@ class Student < ApplicationRecord
   has_many :subject_marks
   has_many :subjects, :through => :subject_marks# dependent: :destroy
   has_one :adress, :as => :addressable, dependent: :destroy
+  has_one :cart, dependent: :destroy
 
   validates :first_name, :last_name, presence: true
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/,

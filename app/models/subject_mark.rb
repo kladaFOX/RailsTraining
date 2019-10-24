@@ -22,5 +22,5 @@ class SubjectMark < ApplicationRecord
     output
   end
 
-
+  
 end
