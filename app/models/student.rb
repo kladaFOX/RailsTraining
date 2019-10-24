@@ -8,6 +8,7 @@ class Student < ApplicationRecord
   has_many :subjects, :through => :subject_marks# dependent: :destroy
   has_one :adress, :as => :addressable, dependent: :destroy
   has_one :cart, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   validates :first_name, :last_name, presence: true
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/,
@@ -23,6 +24,6 @@ class Student < ApplicationRecord
       self.last_name = last_name.downcase.titleize
       self.patronymic = patronymic.downcase.titleize unless self.patronymic.nil?
     end
-#адрес проживания регистрации
+#
 
 end
