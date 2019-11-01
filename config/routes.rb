@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :groups do
+    resources :students, shallow: true do
+      resources :subject_marks, shallow: true, path: 'marks'
+      member do
+        get 'average_mark'
+      end
+    end
+  end
 end
